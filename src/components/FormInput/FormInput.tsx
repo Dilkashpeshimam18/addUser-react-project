@@ -12,14 +12,19 @@ const FormInput = () => {
     const handleAge = (event: React.ChangeEvent<HTMLInputElement>) => {
         setAge(event.target.value)
     }
+    const handleSubmit=(e:React.FormEvent<HTMLFormElement>)=>{
+        e.preventDefault()
+        console.log(userName)
+        console.log(age)
+    }
     return (
         <div className='formInput'>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <h4>Username</h4>
                 <input value={userName} onChange={handleName} type='text' placeholder='add your username' />
                 <h4>Age</h4>
                 <input value={age} onChange={handleAge} type='number' placeholder='add your age' />
-                <Button />
+                <Button/>
 
             </form>
 

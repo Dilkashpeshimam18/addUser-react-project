@@ -1,10 +1,11 @@
 import React from 'react'
 import './Button.css'
 
+
 const Button = () => {
   return (
     <div className='button'>
-     <button>Add User</button>
+      <button type='submit'>Add User</button>
     </div>
   )
 }
