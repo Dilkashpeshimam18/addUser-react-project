@@ -5,9 +5,9 @@ import { User } from '../User'
 
 const DisplayUser = ({ users }: User[] | any) => {
   return (
-    <div>
+    <React.Fragment>
       <UsersList users={users} />
-    </div>
+    </React.Fragment>
   )
 }
 

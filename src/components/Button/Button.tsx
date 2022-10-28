@@ -1,12 +1,13 @@
 import React from 'react'
 import './Button.css'
+import Wrapper from '../Helper/Wrapper'
 
 
 const Button = () => {
   return (
-    <div className='button'>
+    <Wrapper>
       <button type='submit'>Add User</button>
-    </div>
+    </Wrapper>
   )
 }
 
