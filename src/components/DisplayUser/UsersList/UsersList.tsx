@@ -9,6 +9,8 @@ const UsersList = ({ users }: User[] | any) => {
           <div key={index}>
             <p>{user.username}</p>
             <p>{user.age}</p>
+            <p>{user.college}</p>
+
           </div>
         )
       })}
