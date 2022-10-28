@@ -1,9 +1,13 @@
 import React from 'react'
-import './Display.css'
+import './DisplayUser.css'
+import UsersList from './UsersList/UsersList'
+import { User } from '../User'
 
-const DisplayUser = () => {
+const DisplayUser = ({ users }: User[] | any) => {
   return (
-    <div>DisplayUser</div>
+    <div>
+      <UsersList users={users} />
+    </div>
   )
 }
 

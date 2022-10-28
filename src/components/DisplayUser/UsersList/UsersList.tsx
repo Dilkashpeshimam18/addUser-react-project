@@ -1,9 +1,18 @@
 import React from 'react'
-import './UserList.css'
-
-const UsersList = () => {
+import './UsersList.css'
+import { User } from '../../User'
+const UsersList = ({ users }: User[] | any) => {
   return (
-    <div>UsersList</div>
+    <div>
+      {users.map((user: any) => {
+        return (
+          <div>
+            <p>{user.username}</p>
+            <p>{user.age}</p>
+          </div>
+        )
+      })}
+    </div>
   )
 }
 
