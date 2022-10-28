@@ -1,10 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './FormInput.css'
+import Button from '../Button/Button'
 
 const FormInput = () => {
-  return (
-    <div>FormInput</div>
-  )
+    const [userName, setUserName] = useState<string>('')
+    const [age, setAge] = useState<any>(0)
+
+    const handleName = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setUserName(event.target.value)
+    }
+    const handleAge = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setAge(event.target.value)
+    }
+    return (
+        <div className='formInput'>
+            <form>
+                <h4>Username</h4>
+                <input value={userName} onChange={handleName} type='text' placeholder='add your username' />
+                <h4>Age</h4>
+                <input value={age} onChange={handleAge} type='number' placeholder='add your age' />
+                <Button />
+
+            </form>
+
+        </div>
+    )
 }
 
 export default FormInput

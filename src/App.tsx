@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import AddUser from './components/AddUser/AddUser';
 
 function App() {
   return (
     <div className="app">
-    <h1>Add User</h1>
+      <AddUser />
     </div>
   );
 }
