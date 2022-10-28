@@ -17,16 +17,29 @@ function App() {
   }
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-
-    setUsers((prevUser) => {
-      let updateUsers = [...prevUser]
-      let userDetail = {
-        username: username,
-        age: age
+    if (username == '' && age == 0) {
+      alert('Please enter the username & age first!')
+    } else if (age && !username) {
+      alert('Please enter your username!')
+    } else if (!age && username) {
+      alert('Please enter your age!')
+    } else {
+      if (age <= 0) {
+        alert('Age should be greater than 0')
+      } else {
+        setUsers((prevUser) =>{
+          let updateUsers = [...prevUser]
+          let userDetail = {
+            username: username,
+            age: age
+          }
+          updateUsers.push(userDetail)
+          return updateUsers
+        })
       }
-      updateUsers.push(userDetail)
-      return updateUsers
-    })
+    }
+
+
     setUserName('')
     setAge('')
   }

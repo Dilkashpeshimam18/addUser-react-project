@@ -4,9 +4,9 @@ import { User } from '../../User'
 const UsersList = ({ users }: User[] | any) => {
   return (
     <div>
-      {users.map((user: any) => {
+      {users.map((user: any,index:number) => {
         return (
-          <div>
+          <div key={index}>
             <p>{user.username}</p>
             <p>{user.age}</p>
           </div>
